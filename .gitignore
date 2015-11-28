@@ -1,0 +1,13 @@
+/.idea/
+/project/boot/
+/project/plugins/project
+target/
+worksheets/
+lib_managed/
+src_managed/
+test-output/
+*.iml
+.classpath_nb
+.DS_Store
+.sbt_completion_cache
+dump.rdb

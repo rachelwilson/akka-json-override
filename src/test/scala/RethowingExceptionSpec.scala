@@ -14,7 +14,7 @@ class RethowingExceptionSpec extends FlatSpec with Matchers {
   }
 
   //now get akka/spray json involved
-  "unmarshalling a List of wishes with one missing likelihood" should "result in an DeserializationException thrown with the correct" in {
+  "unmarshalling a List of wishes with one missing likelihood" should "result in an DeserializationException thrown with a message that relates to the problem field" in {
     val underTest = new GenieSerializer
 
     //this fails
@@ -30,7 +30,7 @@ class RethowingExceptionSpec extends FlatSpec with Matchers {
     //this fails
     an [DeserializationException] should be thrownBy underTest.deserializeWishesAsSafeList
 
-    //but this passes if I change the code in SafeCollectionFormats to throw MalformedContentException instead
+    //but this passes, with the correct message, if I change the code in SafeCollectionFormats to throw MalformedContentException instead
     //the [MalformedContentException] thrownBy underTest.deserializeWishesAsList should have message "Object is missing required member 'likelihood'"
   }
 
