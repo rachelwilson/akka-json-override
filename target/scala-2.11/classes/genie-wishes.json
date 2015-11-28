@@ -1,0 +1,16 @@
+{
+  "master": "aladdin",
+  "wishes": [
+    {
+      "request": "world peace",
+      "likelihood": "fair"
+    },
+    {
+      "request": "marry the princess",
+      "likelihood": "good"
+    },
+    {
+      "request": "three more wishes"
+    }
+  ]
+}
